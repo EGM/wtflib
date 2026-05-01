@@ -1,0 +1,23 @@
+{
+  "name": "@egm/wtflib",
+  "version": "0.1.0",
+  "exports": "./src/index.ts",
+  "compilerOptions": {
+    "isolatedDeclarations": true,
+    "strict": true
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 100
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
