@@ -17,5 +17,8 @@
   },
   // Optional: keep formatting consistent across the workspace
   "editor.tabSize": 2,
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "cSpell.words": [
+    "wtflib"
+  ]
 }
