@@ -1,4 +1,35 @@
 /**
+ * Provides utilities for safely canonicalizing user-provided identifiers.
+ *
+ * This module exposes a single function, `canonicalizeIdentifier`, which
+ * normalizes arbitrary input into a stable, lowercase, ASCII-only form.
+ * It is designed for environments where identifiers must be compared,
+ * stored, or validated in a consistent and security‑aware way.
+ *
+ * Key features:
+ * - Removes invisible Unicode characters (zero‑width, BOM, soft hyphen)
+ * - Normalizes Unicode hyphens and dash-like characters to ASCII `-`
+ * - Strips all whitespace, including Unicode whitespace
+ * - Applies NFKC normalization for consistent comparison
+ * - Lowercases the final output for canonical form
+ * - Safely handles non-string input
+ *
+ * Typical use cases include:
+ * - Sanitizing user input before comparison
+ * - Normalizing identifiers from external systems
+ * - Preventing homoglyph and zero‑width character attacks
+ * - Ensuring consistent storage keys across runtimes
+ *
+ * @example
+ * ```ts
+ * import { canonicalizeIdentifier } from "@egm/wtflib";
+ *
+ * canonicalizeIdentifier("E F A - 2"); // "efa-2"
+ * canonicalizeIdentifier("Adm\u200Bin"); // "admin"
+ * ```
+ */
+
+/**
  * Normalizes a string for comparison, removing invisible characters and whitespace, and returns the string as lower case.
  *
  * This function is useful for:
