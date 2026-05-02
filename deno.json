@@ -17,6 +17,9 @@
       ]
     }
   },
+  "tasks": {
+    "test:deno": "deno test ./tests/deno/"
+  },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
   }

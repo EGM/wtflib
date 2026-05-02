@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { canonicalizeIdentifier } from "../src/index.ts";
+import { canonicalizeIdentifier } from "../../src/index.ts";
 
 Deno.test("canonicalizeIdentifier removes all whitespace", () => {
   assertEquals(canonicalizeIdentifier("E F A - 2"), "efa-2");
