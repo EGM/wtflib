@@ -1,5 +1,6 @@
 /**
  * Provides utilities for safely canonicalizing user-provided identifiers.
+ * @module
  *
  * This module exposes a single function, `canonicalizeIdentifier`, which
  * normalizes arbitrary input into a stable, lowercase, ASCII-only form.
